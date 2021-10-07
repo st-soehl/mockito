@@ -943,6 +943,9 @@ class _MockClassInfo {
         // `super.toString`, unless the class has added parameters.
         continue;
       }
+      if (methodName == 'on') {
+        continue;
+      }
       if (methodName == '==') {
         // Never override this operator; user code cannot add parameters or
         // narrow the return type.
